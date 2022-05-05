@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 function App(props :{prop: string;}){
   return (
-      <div className="border-4 border-sky-500">
+      <div className="rounded-md border-4 border-sky-500 p-10">
       React + TypeScript + ChromeExtension sample {props.prop}
       </div>);
 };
