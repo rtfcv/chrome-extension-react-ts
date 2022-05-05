@@ -51,8 +51,8 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
+
   target: 'web',
   devtool: 'cheap-module-source-map',
-  // mode: 'production',
   mode: 'development',
 };
