@@ -1,0 +1,17 @@
+{
+  "name": "sampleExtension",
+  "description": "sampleExtension",
+  "version": "0.0",
+  "manifest_version": 3,
+  "permissions": [
+      "contextMenus",
+      "storage",
+      "tabs"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "action": {
+      "default_title": "Click me to open a new window"
+  }
+}
