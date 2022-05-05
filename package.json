@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cp ./src/style.css ./dist/ && webpack",
-    "build-win": "copy .\\src\\style.css .\\dist\\ && webpack",
-    "prod-build": "cp ./src/style.css ./dist/ && webpack --mode=production",
-    "prod-build-win": "copy .\\src\\style.css .\\dist\\ && webpack --config webpack.config.prod.js",
+    "build": "tailwindcss -i ./src/style.css -o ./dist/style.css && webpack",
+    "build-win": "tailwindcss -i ./src/style.css -o ./dist/style.css && webpack",
+    "prod-build": "NODE_ENV=production  tailwindcss -i ./src/style.css -o ./dist/style.css && webpack --config webpack.config.prod.js",
+    "prod-build-win": "set NODE_ENV=production && tailwindcss -i .\\src\\style.css -o .\\dist\\ && webpack --config webpack.config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "rtfcv",
@@ -17,6 +17,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2",
     "@types/chrome": "^0.0.184",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
@@ -25,6 +26,7 @@
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "terser-webpack-plugin": "^5.3.1",
+    "tailwindcss": "^3.0.24",
     "ts-loader": "^9.3.0",
     "typescript": "^4.6.4",
     "webpack": "^5.72.0",
